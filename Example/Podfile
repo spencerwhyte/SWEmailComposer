@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SWEmailComposer_Example' do
+  pod 'SWEmailComposer', :path => '../'
+
+  target 'SWEmailComposer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
