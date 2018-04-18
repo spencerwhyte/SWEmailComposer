@@ -25,16 +25,16 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Spencer Whyte' => 'spencerwhyte@gmail.com' }
-  s.source           = { :git => 'https://github.com/Spencer Whyte/SWEmailComposer.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/spencerwhyte/SWEmailComposer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SWEmailComposer/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SWEmailComposer' => ['SWEmailComposer/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'SWEmailComposer' => ['SWEmailComposer/Assets/*.xcassets']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

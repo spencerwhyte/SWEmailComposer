@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		310787E1C9E94E76FFE223D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		310787E1C9E94E76FFE223D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3DF5B49238FFD06740776C8B /* Pods_SWEmailComposer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWEmailComposer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* SWEmailComposer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWEmailComposer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,10 +43,10 @@
 		729A61F849C20B2F25EDA48E /* Pods-SWEmailComposer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEmailComposer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWEmailComposer_Example/Pods-SWEmailComposer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7B7F0325B66FE8E110EBB2A3 /* Pods-SWEmailComposer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEmailComposer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWEmailComposer_Tests/Pods-SWEmailComposer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		986E1AF3243ADCD252C128A0 /* Pods-SWEmailComposer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEmailComposer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWEmailComposer_Tests/Pods-SWEmailComposer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B7DF63B73F1379BDDDC65BBA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B7DF63B73F1379BDDDC65BBA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D41E7B763354B130512B32CA /* Pods_SWEmailComposer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWEmailComposer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E047AFC5964A817C2E296F15 /* Pods-SWEmailComposer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEmailComposer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWEmailComposer_Example/Pods-SWEmailComposer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F0FB60145698F05DF6B882A8 /* SWEmailComposer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SWEmailComposer.podspec; path = ../SWEmailComposer.podspec; sourceTree = "<group>"; };
+		F0FB60145698F05DF6B882A8 /* SWEmailComposer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SWEmailComposer.podspec; path = ../SWEmailComposer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = WVBC7Y8Y57;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = WVBC7Y8Y57;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -469,7 +471,9 @@
 			baseConfigurationReference = E047AFC5964A817C2E296F15 /* Pods-SWEmailComposer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WVBC7Y8Y57;
 				INFOPLIST_FILE = SWEmailComposer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -484,7 +488,9 @@
 			baseConfigurationReference = 729A61F849C20B2F25EDA48E /* Pods-SWEmailComposer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WVBC7Y8Y57;
 				INFOPLIST_FILE = SWEmailComposer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -498,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 986E1AF3243ADCD252C128A0 /* Pods-SWEmailComposer_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = WVBC7Y8Y57;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -507,6 +514,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -519,11 +527,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B7F0325B66FE8E110EBB2A3 /* Pods-SWEmailComposer_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = WVBC7Y8Y57;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

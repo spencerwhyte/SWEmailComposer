@@ -1,0 +1,6 @@
+framework module SWEmailComposer {
+  umbrella header "SWEmailComposer-umbrella.h"
+
+  export *
+  module * { export * }
+}

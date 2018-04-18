@@ -7,18 +7,33 @@
 //
 
 import UIKit
+import SWEmailComposer
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        var emailConfig = EmailConfig()
+        emailConfig.fromEmail = "spencerwhyte@gmail.com"
+        emailConfig.subject = "Your estimate from Toolbelt Test"
+        emailConfig.body = "Thank you for your business"
+        
+        let composer = MailComposerTableViewController(emailConfig: emailConfig, delegate: self)
+        let navigationController = UINavigationController(rootViewController: composer)
+        self.present(navigationController, animated: true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
 }
 
+extension ViewController: MailComposerTableViewControllerDelegate {
+    
+    func didFinishComposingEmail(emailComposer: MailComposerTableViewController, emailConfig: EmailConfig) {
+        print("didFinishComposingEmail(..)")
+        print(emailConfig)
+    }
+    
+    func didCancelComposingEmail(emailComposer: MailComposerTableViewController) {
+        print("didCancelComposingEmail(..)")
+    }
+}

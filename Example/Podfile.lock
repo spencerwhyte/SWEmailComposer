@@ -1,0 +1,16 @@
+PODS:
+  - SWEmailComposer (0.1.0)
+
+DEPENDENCIES:
+  - SWEmailComposer (from `../`)
+
+EXTERNAL SOURCES:
+  SWEmailComposer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SWEmailComposer: 46d9a37b2800c461a961572caa5d14719fb6ff96
+
+PODFILE CHECKSUM: 285d500ff099b7e2fa8b0a63d55ab8a692edeb99
+
+COCOAPODS: 1.5.0
