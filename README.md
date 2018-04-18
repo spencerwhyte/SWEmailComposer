@@ -1,6 +1,6 @@
 # SWEmailComposer
 
-[![CI Status](http://img.shields.io/travis/Spencer Whyte/SWEmailComposer.svg?style=flat)](https://travis-ci.org/Spencer Whyte/SWEmailComposer)
+[![CI Status](http://img.shields.io/travis/spencerwhyte/SWEmailComposer.svg?style=flat)](https://travis-ci.org/spencerwhyte/SWEmailComposer)
 [![Version](https://img.shields.io/cocoapods/v/SWEmailComposer.svg?style=flat)](http://cocoapods.org/pods/SWEmailComposer)
 [![License](https://img.shields.io/cocoapods/l/SWEmailComposer.svg?style=flat)](http://cocoapods.org/pods/SWEmailComposer)
 [![Platform](https://img.shields.io/cocoapods/p/SWEmailComposer.svg?style=flat)](http://cocoapods.org/pods/SWEmailComposer)
