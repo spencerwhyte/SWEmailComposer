@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SWEmailComposer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SWEmailComposer.'
+  s.summary          = 'An Apple-like email composer.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,23 +18,25 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SWEmailComposer gives you the ability to present an email composer to the user without sending out the final email through the iOS Mail app. Instead the contents of the email is provided to you through the delegate.
                        DESC
 
-  s.homepage         = 'https://github.com/Spencer Whyte/SWEmailComposer'
+  s.homepage         = 'https://github.com/spencerwhyte/SWEmailComposer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Spencer Whyte' => 'spencerwhyte@gmail.com' }
   s.source           = { :git => 'https://github.com/spencerwhyte/SWEmailComposer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'SWEmailComposer/Classes/**/*'
   
   s.resource_bundles = {
      'SWEmailComposer' => ['SWEmailComposer/Assets/*.xcassets']
   }
+  
+  s.swift_version = '4.1'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
