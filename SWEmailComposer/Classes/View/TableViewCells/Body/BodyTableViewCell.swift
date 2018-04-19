@@ -46,8 +46,11 @@ extension BodyTableViewCell {
     fileprivate func setupTextView() {
         self.textView.translatesAutoresizingMaskIntoConstraints = false
         self.textView.isScrollEnabled = false
-        self.textView.font = UIFont.systemFont(ofSize: 20)
+        self.textView.font = UIFont.systemFont(ofSize: 17)
         self.textView.delegate = self
+        //self.textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.textView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.textView.textContainer.lineFragmentPadding = 0
         
         self.addSubview(self.textView)
     }

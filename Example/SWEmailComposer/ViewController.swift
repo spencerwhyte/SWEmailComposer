@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         emailConfig.fromEmail = "spencerwhyte@gmail.com"
         emailConfig.subject = "Your estimate from Toolbelt Test"
         emailConfig.body = "Thank you for your business"
+        emailConfig.attachmentName = "Report.pdf"
         
         let composer = MailComposerTableViewController(emailConfig: emailConfig, delegate: self)
         let navigationController = UINavigationController(rootViewController: composer)

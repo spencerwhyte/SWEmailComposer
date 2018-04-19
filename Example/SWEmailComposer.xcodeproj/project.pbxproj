@@ -265,7 +265,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		16BA7619024794818D678FFF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -276,7 +276,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWEmailComposer.framework",
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWEmailComposer_Example/Pods-SWEmailComposer_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
