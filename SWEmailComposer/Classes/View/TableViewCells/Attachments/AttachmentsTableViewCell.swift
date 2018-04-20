@@ -14,12 +14,14 @@ class AttachmentsTableViewCell: UITableViewCell {
     fileprivate let fileExtensionLabel: UILabel
     fileprivate let attachmentIcon: UIImageView
 
-    var attachmentName: String = "" {
+    var attachmentName: String? {
         didSet {
             attachmentLabel.text = attachmentName
-            let attachmentNameComponents = attachmentName.components(separatedBy: ".")
-            if let fileExtension = attachmentNameComponents.last?.uppercased() {
+            let attachmentNameComponents = attachmentName?.components(separatedBy: ".")
+            if let fileExtension = attachmentNameComponents?.last?.uppercased() {
                 fileExtensionLabel.text = fileExtension
+            } else {
+                fileExtensionLabel.text = ""
             }
         }
     }

@@ -101,7 +101,7 @@ public class MailComposerTableViewController: UITableViewController, UITextViewD
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: AttachmentsTableViewCell.reuseIdentifier, for: indexPath) as! AttachmentsTableViewCell
-            cell.attachmentName = "report.pdf"
+            cell.attachmentName = self.mailComposerModel.emailConfig.attachmentName
             return cell
         }
     }
