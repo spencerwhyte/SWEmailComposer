@@ -78,4 +78,12 @@ extension SubjectTableViewCell: UITextViewDelegate {
         self.emailSubjectTableViewCellDelegate?.didUpdateSubject(subjectTableViewCell: self, subject: subject)
     }
     
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            self.emailSubjectTableViewCellDelegate?.willReturn(subjectTableViewCell: self)
+            return false
+        }
+        return true
+    }
+    
 }

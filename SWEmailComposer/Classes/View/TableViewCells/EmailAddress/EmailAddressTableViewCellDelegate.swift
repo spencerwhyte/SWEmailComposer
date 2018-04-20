@@ -9,4 +9,5 @@
 protocol EmailAddressTableViewCellDelegate: class {
     
     func didUpdateEmailAddresses(emailAddressTableViewCell: EmailAddressTableViewCell, emailAddresses: String)
+    func willReturn(emailAddressTableViewCell: EmailAddressTableViewCell)
 }

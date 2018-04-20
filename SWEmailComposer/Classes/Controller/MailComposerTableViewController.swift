@@ -137,6 +137,14 @@ extension MailComposerTableViewController {
         return self.tableView.cellForRow(at: self.fromEmailAddressIndexPath) as? EmailAddressTableViewCell
     }
     
+    fileprivate func subjectTableViewCell() -> SubjectTableViewCell? {
+        return self.tableView.cellForRow(at: self.subjectIndexPath) as? SubjectTableViewCell
+    }
+    
+    fileprivate func bodyTableViewCell() -> BodyTableViewCell? {
+        return self.tableView.cellForRow(at: self.bodyIndexPath) as? BodyTableViewCell
+    }
+    
     fileprivate func didChangeModel() {
         let isCompositionValid = (self.mailComposerModel.extractToEmails().count > 0 || self.mailComposerModel.emailConfig.isSendToCompanyEnabled == true) && self.mailComposerModel.isSubjectValid()
         self.navigationItem.rightBarButtonItem?.isEnabled = isCompositionValid
@@ -187,6 +195,12 @@ extension MailComposerTableViewController: EmailAddressTableViewCellDelegate {
         }
         self.didChangeModel()
     }
+    
+    func willReturn(emailAddressTableViewCell: EmailAddressTableViewCell) {
+        if emailAddressTableViewCell === self.toEmailAddressTableViewCell() {
+            self.subjectTableViewCell()?.subjectTextView.becomeFirstResponder()
+        }
+    }
 }
 
 extension MailComposerTableViewController: SubjectTableViewCellDelegate {
@@ -196,6 +210,10 @@ extension MailComposerTableViewController: SubjectTableViewCellDelegate {
         self.updateNavigationTitle()
         self.didChangeModel()
         self.updateCellSize()
+    }
+    
+    func willReturn(subjectTableViewCell: SubjectTableViewCell) {
+        self.bodyTableViewCell()?.textView.becomeFirstResponder()
     }
 }
 

@@ -85,6 +85,7 @@ extension EmailAddressTableViewCell {
         self.emailTextField.autocapitalizationType = .none
         self.emailTextField.translatesAutoresizingMaskIntoConstraints = false
         self.emailTextField.addTarget(self, action: #selector(emailTextChanged), for: .editingChanged)
+        self.emailTextField.delegate = self
         self.emailTextField.keyboardType = .emailAddress
         self.addSubview(self.emailTextField)
     }
@@ -103,4 +104,13 @@ extension EmailAddressTableViewCell {
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]|", options: [], metrics: nil, views: views))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textField(>=49)]|", options: [], metrics: nil, views: views))
     }
+}
+
+extension EmailAddressTableViewCell: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.emailAddressTableViewCellDelegate?.willReturn(emailAddressTableViewCell: self)
+        return false
+    }
+    
 }

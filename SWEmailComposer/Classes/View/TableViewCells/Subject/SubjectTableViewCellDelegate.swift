@@ -9,4 +9,5 @@
 protocol SubjectTableViewCellDelegate: class {
     
     func didUpdateSubject(subjectTableViewCell: SubjectTableViewCell, subject: String)
+    func willReturn(subjectTableViewCell: SubjectTableViewCell)
 }

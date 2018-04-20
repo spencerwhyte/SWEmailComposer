@@ -11,7 +11,7 @@ import UIKit
 class BodyTableViewCell: UITableViewCell {
 
     weak var bodyTableViewCellDelegate: BodyTableViewCellDelegate?
-    fileprivate let textView: UITextView
+    let textView: UITextView
     
     var bodyText: String {
         get {
