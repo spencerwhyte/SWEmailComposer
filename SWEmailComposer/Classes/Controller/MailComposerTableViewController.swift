@@ -146,7 +146,8 @@ extension MailComposerTableViewController {
     }
     
     fileprivate func didChangeModel() {
-        let isCompositionValid = (self.mailComposerModel.extractToEmails().count > 0 || self.mailComposerModel.emailConfig.isSendToCompanyEnabled == true) && self.mailComposerModel.isSubjectValid()
+        let toEmailIsEffectivelyEmpty: Bool = (self.mailComposerModel.emailConfig.toEmail?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty != false)
+        let isCompositionValid = (self.mailComposerModel.extractToEmails().count > 0 || (toEmailIsEffectivelyEmpty && self.mailComposerModel.emailConfig.isSendToCompanyEnabled == true)) && self.mailComposerModel.isSubjectValid()
         self.navigationItem.rightBarButtonItem?.isEnabled = isCompositionValid
     }
     
