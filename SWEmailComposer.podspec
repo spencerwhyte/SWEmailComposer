@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SWEmailComposer'
   s.version          = '0.1.0'
-  s.summary          = 'An Apple-like email composer.'
+  s.summary          = 'An Apple-like email composer written in Swift.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-SWEmailComposer gives you the ability to present an email composer to the user without sending out the final email through the iOS Mail app. Instead the contents of the email is provided to you through the delegate.
+SWEmailComposer gives you the ability to present an email composer to the user WITHOUT sending out the final email through the iOS Mail app. Instead the contents of the email is provided to you through the delegate. Written in Swift.
                        DESC
 
   s.homepage         = 'https://github.com/spencerwhyte/SWEmailComposer'
