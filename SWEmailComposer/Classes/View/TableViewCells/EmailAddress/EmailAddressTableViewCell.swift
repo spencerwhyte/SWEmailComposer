@@ -19,7 +19,9 @@ class EmailAddressTableViewCell: UITableViewCell {
             return emailTextField.attributedText
         }
         set(newEmails) {
+            let cursorPosition = emailTextField.selectedTextRange
             emailTextField.attributedText = newEmails
+            emailTextField.selectedTextRange = cursorPosition
         }
     }
     var label: String? {
