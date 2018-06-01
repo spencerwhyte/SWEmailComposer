@@ -37,9 +37,6 @@ class EmailAddressTableViewCell: UITableViewCell {
             if readonly {
                 self.emailTextField.textColor = UIColor.lightGray
                 self.emailTextField.isUserInteractionEnabled = false
-            } else {
-                self.emailTextField.textColor = UIColor.black
-                self.emailTextField.isUserInteractionEnabled = true
             }
         }
     }
