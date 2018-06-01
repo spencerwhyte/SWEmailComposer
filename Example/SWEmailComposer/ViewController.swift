@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
         var emailConfig = EmailConfig()
         emailConfig.fromEmail = "spencerwhyte@gmail.com"
+        emailConfig.toEmail = "spencerwhyte@gmail.com"
         emailConfig.subject = "Your estimate from Toolbelt Test"
         emailConfig.body = "Thank you for your business"
         emailConfig.attachmentName = "Report.pdf"
