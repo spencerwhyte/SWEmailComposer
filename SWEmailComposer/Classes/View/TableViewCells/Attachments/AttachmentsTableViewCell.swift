@@ -26,7 +26,7 @@ class AttachmentsTableViewCell: UITableViewCell {
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: CellStyle, reuseIdentifier: String?) {
         self.attachmentLabel = UILabel()
         self.fileExtensionLabel = UILabel()
         self.attachmentIcon = UIImageView()

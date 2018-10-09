@@ -41,7 +41,7 @@ class EmailAddressTableViewCell: UITableViewCell {
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: CellStyle, reuseIdentifier: String?) {
         self.emailTextField = UITextField()
         self.emailLabel = UILabel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)

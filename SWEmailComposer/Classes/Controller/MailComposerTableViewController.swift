@@ -118,7 +118,7 @@ extension MailComposerTableViewController {
         
         self.tableView.tableFooterView = UIView()
         self.tableView.estimatedRowHeight = 50
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
     
     fileprivate func updateNavigationTitle() {
@@ -167,7 +167,7 @@ extension MailComposerTableViewController {
         let attributedEmailsString = NSMutableAttributedString(string: emailAddresses)
         let ranges = mailComposerModel.extractEmails(email: emailAddresses)
         for range in ranges {
-            attributedEmailsString.addAttribute(NSAttributedStringKey.foregroundColor, value: self.view.tintColor, range: range)
+            attributedEmailsString.addAttribute(NSAttributedString.Key.foregroundColor, value: self.view.tintColor, range: range)
         }
         return attributedEmailsString
     }

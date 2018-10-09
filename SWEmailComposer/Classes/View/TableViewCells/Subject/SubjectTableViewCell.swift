@@ -14,7 +14,7 @@ class SubjectTableViewCell: UITableViewCell {
     fileprivate var subjectLabel: UILabel
     weak var emailSubjectTableViewCellDelegate: SubjectTableViewCellDelegate?
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: CellStyle, reuseIdentifier: String?) {
         self.subjectTextView = UITextView()
         self.subjectLabel = UILabel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)

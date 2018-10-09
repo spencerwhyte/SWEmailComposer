@@ -63,15 +63,15 @@
 /* Begin PBXFileReference section */
 		075A9E0615A8212B400AECDCA4FCA60E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E0A0FF142F7429E47A50C3851C4ADB /* EmailAddressTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailAddressTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		0C25659E31314D8BB9DD547A5EE7A36A /* Pods_SWEmailComposer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SWEmailComposer_Example.framework; path = "Pods-SWEmailComposer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C25659E31314D8BB9DD547A5EE7A36A /* Pods_SWEmailComposer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWEmailComposer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		117F9517314928560C56317154E68ADA /* ResourceBundle-SWEmailComposer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SWEmailComposer-Info.plist"; sourceTree = "<group>"; };
 		1424B32C97F0714F4A2A416AFD9778FF /* Pods-SWEmailComposer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWEmailComposer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		14C57E5FDAD935AF5FDFF4BD1DC35AEF /* Pods-SWEmailComposer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWEmailComposer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		19ADEC8EABC6BE11A0F7BE1D181ACD04 /* Pods-SWEmailComposer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWEmailComposer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1BA2F7E5AB869A467684B2693CA5DF24 /* Pods-SWEmailComposer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWEmailComposer_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1BEB54026F1D180DEA0684FE4A467C39 /* SWEmailComposer.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SWEmailComposer.bundle; path = "SWEmailComposer-SWEmailComposer.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEB54026F1D180DEA0684FE4A467C39 /* SWEmailComposer.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWEmailComposer.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6BC629388094FE75001C9339BC56DE /* Pods-SWEmailComposer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWEmailComposer_Tests-resources.sh"; sourceTree = "<group>"; };
-		22E209E503A0CDB597F861712E37E1E9 /* SWEmailComposer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SWEmailComposer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		22E209E503A0CDB597F861712E37E1E9 /* SWEmailComposer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SWEmailComposer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		26B2E4BD5F525865CD1271A864FB31B9 /* ReusableCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		28116AB6617F4D95AB5DC5173D4D48C5 /* Pods-SWEmailComposer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWEmailComposer_Tests-umbrella.h"; sourceTree = "<group>"; };
 		39A163A7BBA99B9825F4051C86568DE8 /* Pods-SWEmailComposer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWEmailComposer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -84,14 +84,14 @@
 		60BDD7DF2600FEE30AF5B67263C7D3FE /* EmailConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailConfig.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6D4EA6EF6F94D0461583189A145C8A35 /* MailComposerTableViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MailComposerTableViewControllerDelegate.swift; sourceTree = "<group>"; };
-		6F18C0C8C8246858816B555631C2BD4E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6F18C0C8C8246858816B555631C2BD4E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8075207CF17C5075AEBB12EC3562E298 /* Pods-SWEmailComposer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWEmailComposer_Example-dummy.m"; sourceTree = "<group>"; };
 		80F245D10BF48664FE523982D44F511E /* BodyTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BodyTableViewCell.swift; sourceTree = "<group>"; };
 		87029E9635EBB7A9096FBEF25FD8A8D9 /* BodyTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BodyTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		882D6420ADD97327AB48583D6BCCD09A /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
 		8BA8BEADA2A53D619249638B774085FF /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SWEmailComposer/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		8F1515658BB33F3FE780A02025B5474C /* SWEmailComposer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWEmailComposer-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FC35347D5C4680D0BA57887B93AC065 /* AttachmentsTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AttachmentsTableViewCell.swift; sourceTree = "<group>"; };
 		B0DBDBF6E8B08444FE4D669353E11C12 /* SwitchTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		B1D010C0C379FC99FD8A42FE05DB42CD /* MailComposerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MailComposerModel.swift; sourceTree = "<group>"; };
@@ -105,10 +105,10 @@
 		D63FC810F37D168782C3F315EFEDB500 /* SWEmailComposer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWEmailComposer-umbrella.h"; sourceTree = "<group>"; };
 		D7C942F447FDE14F4FBF198B4E2868A5 /* Pods-SWEmailComposer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWEmailComposer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E01DA10CC1586F75F5E9D6D737C65C73 /* Pods-SWEmailComposer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWEmailComposer_Example-umbrella.h"; sourceTree = "<group>"; };
-		E3BB2D54E2B7535C0673244A87F84B45 /* Pods_SWEmailComposer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SWEmailComposer_Tests.framework; path = "Pods-SWEmailComposer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BB2D54E2B7535C0673244A87F84B45 /* Pods_SWEmailComposer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWEmailComposer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C3D348A08094C4E95B015E2929132C /* SWEmailComposer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWEmailComposer-prefix.pch"; sourceTree = "<group>"; };
-		E7DE3156F1A5D7947BCDC2555C2FA7A9 /* SWEmailComposer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWEmailComposer.framework; path = SWEmailComposer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC4DCEC7CB4668079A9D6272FC9416F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E7DE3156F1A5D7947BCDC2555C2FA7A9 /* SWEmailComposer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWEmailComposer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC4DCEC7CB4668079A9D6272FC9416F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ECAC96CCFE67ABC9988D3F98ACDCB1E0 /* Pods-SWEmailComposer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SWEmailComposer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		ED1475F7801F1DD65B16E6C2A2441B87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F25D51CC252DF51B5BC7CE9F68BF5D8A /* Pods-SWEmailComposer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWEmailComposer_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +222,6 @@
 				BEF652E06F27601AFC15D64B779B8907 /* SwitchTableViewCell.swift */,
 				B0DBDBF6E8B08444FE4D669353E11C12 /* SwitchTableViewCellDelegate.swift */,
 			);
-			name = Switch;
 			path = Switch;
 			sourceTree = "<group>";
 		};
@@ -319,7 +318,6 @@
 				882D6420ADD97327AB48583D6BCCD09A /* SubjectTableViewCell.swift */,
 				BF1104322DA5D63CB4FA46E04AA65E50 /* SubjectTableViewCellDelegate.swift */,
 			);
-			name = Subject;
 			path = Subject;
 			sourceTree = "<group>";
 		};
@@ -337,7 +335,6 @@
 				80F245D10BF48664FE523982D44F511E /* BodyTableViewCell.swift */,
 				87029E9635EBB7A9096FBEF25FD8A8D9 /* BodyTableViewCellDelegate.swift */,
 			);
-			name = Body;
 			path = Body;
 			sourceTree = "<group>";
 		};
@@ -350,7 +347,6 @@
 				BD34F6D71CA02E4D64855A7ACE42193F /* Subject */,
 				53163CAADAD2C711F01385D52D9D8282 /* Switch */,
 			);
-			name = TableViewCells;
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
@@ -379,7 +375,6 @@
 				5D4D8D7AE7501F6CB0BBCB2A949D63FD /* EmailAddressTableViewCell.swift */,
 				09E0A0FF142F7429E47A50C3851C4ADB /* EmailAddressTableViewCellDelegate.swift */,
 			);
-			name = EmailAddress;
 			path = EmailAddress;
 			sourceTree = "<group>";
 		};
@@ -397,7 +392,6 @@
 			children = (
 				9FC35347D5C4680D0BA57887B93AC065 /* AttachmentsTableViewCell.swift */,
 			);
-			name = Attachments;
 			path = Attachments;
 			sourceTree = "<group>";
 		};
@@ -880,7 +874,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.1;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -912,7 +906,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
