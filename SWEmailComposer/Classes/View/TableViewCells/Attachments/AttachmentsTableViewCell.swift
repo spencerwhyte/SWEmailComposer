@@ -6,6 +6,8 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 class AttachmentsTableViewCell: UITableViewCell {
@@ -91,3 +93,5 @@ extension AttachmentsTableViewCell {
         self.addConstraint(NSLayoutConstraint(item: self.fileExtensionLabel, attribute: .centerY, relatedBy: .equal, toItem: self.attachmentIcon, attribute: .centerY, multiplier: 1, constant: 0))
     }
 }
+
+#endif

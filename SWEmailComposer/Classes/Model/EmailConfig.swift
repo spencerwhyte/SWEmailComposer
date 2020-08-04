@@ -6,8 +6,6 @@
 //  Copyright © 2016 Spencer Whyte. All rights reserved.
 //
 
-import UIKit
-
 public struct EmailConfig {
 
     public init() {

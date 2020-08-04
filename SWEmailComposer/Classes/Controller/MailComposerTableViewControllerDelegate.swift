@@ -6,8 +6,12 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 public protocol MailComposerTableViewControllerDelegate: class {
     
     func didFinishComposingEmail(emailComposer: MailComposerTableViewController, emailConfig: EmailConfig)
     func didCancelComposingEmail(emailComposer: MailComposerTableViewController)
 }
+
+#endif

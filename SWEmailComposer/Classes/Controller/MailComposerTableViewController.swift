@@ -6,6 +6,8 @@
 //  Copyright © 2016 Spencer Whyte. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 public class MailComposerTableViewController: UITableViewController, UITextViewDelegate {
@@ -225,3 +227,5 @@ extension MailComposerTableViewController: SwitchTableViewCellDelegate {
         self.didChangeModel()
     }
 }
+
+#endif

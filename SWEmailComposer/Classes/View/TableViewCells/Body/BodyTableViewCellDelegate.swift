@@ -6,6 +6,8 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 protocol BodyTableViewCellDelegate: class {
@@ -14,3 +16,5 @@ protocol BodyTableViewCellDelegate: class {
     func didUpdateBodyText(bodyTableViewCell: BodyTableViewCell, text: String)
     
 }
+
+#endif

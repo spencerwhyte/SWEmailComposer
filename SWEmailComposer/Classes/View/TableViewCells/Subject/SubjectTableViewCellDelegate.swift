@@ -6,8 +6,12 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 protocol SubjectTableViewCellDelegate: class {
     
     func didUpdateSubject(subjectTableViewCell: SubjectTableViewCell, subject: String)
     func willReturn(subjectTableViewCell: SubjectTableViewCell)
 }
+
+#endif

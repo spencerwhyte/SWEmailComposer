@@ -6,7 +6,7 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol EmailValidator {
 

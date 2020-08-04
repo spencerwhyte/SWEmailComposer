@@ -6,6 +6,8 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 class SwitchTableViewCell: UITableViewCell {
@@ -52,3 +54,5 @@ extension SwitchTableViewCell {
         self.switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
     }
 }
+
+#endif

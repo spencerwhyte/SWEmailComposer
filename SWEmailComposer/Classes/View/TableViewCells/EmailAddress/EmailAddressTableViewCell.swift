@@ -6,6 +6,8 @@
 //  Copyright © 2016 Spencer Whyte. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 class EmailAddressTableViewCell: UITableViewCell {
@@ -113,3 +115,5 @@ extension EmailAddressTableViewCell: UITextFieldDelegate {
     }
     
 }
+
+#endif

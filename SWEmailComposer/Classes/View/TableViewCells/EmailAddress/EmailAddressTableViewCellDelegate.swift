@@ -6,8 +6,12 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 protocol EmailAddressTableViewCellDelegate: class {
     
     func didUpdateEmailAddresses(emailAddressTableViewCell: EmailAddressTableViewCell, emailAddresses: String)
     func willReturn(emailAddressTableViewCell: EmailAddressTableViewCell)
 }
+
+#endif

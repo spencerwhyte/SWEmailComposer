@@ -6,6 +6,8 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 class BodyTableViewCell: UITableViewCell {
@@ -72,3 +74,5 @@ extension BodyTableViewCell: UITextViewDelegate {
         self.bodyTableViewCellDelegate?.shouldUpdateCellSize(bodyTableViewCell: self)
     }
 }
+
+#endif

@@ -6,6 +6,8 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 protocol ReusableCell {
@@ -31,3 +33,4 @@ extension ReusableCell where Self: UICollectionViewCell {
     }
 }
 
+#endif

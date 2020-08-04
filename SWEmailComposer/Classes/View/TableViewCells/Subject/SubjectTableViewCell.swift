@@ -6,6 +6,8 @@
 //  Copyright © 2016 Spencer Whyte. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 class SubjectTableViewCell: UITableViewCell {
@@ -87,3 +89,5 @@ extension SubjectTableViewCell: UITextViewDelegate {
     }
     
 }
+
+#endif

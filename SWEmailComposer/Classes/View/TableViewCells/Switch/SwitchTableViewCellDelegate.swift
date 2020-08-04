@@ -6,6 +6,8 @@
 //  Copyright © 2018 WorldReach Software. All rights reserved.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 protocol SwitchTableViewCellDelegate: class {
@@ -13,3 +15,5 @@ protocol SwitchTableViewCellDelegate: class {
     func didUpdateSwitchState(switchTableViewCell: SwitchTableViewCell, state: Bool)
     
 }
+
+#endif
