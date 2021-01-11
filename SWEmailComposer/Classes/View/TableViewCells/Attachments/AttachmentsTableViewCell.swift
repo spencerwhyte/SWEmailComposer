@@ -61,11 +61,7 @@ extension AttachmentsTableViewCell {
     
     private func setupIcon() {
         attachmentIcon.translatesAutoresizingMaskIntoConstraints = false
-        let podBundle = Bundle(for: AttachmentsTableViewCell.classForCoder())
-        if let bundleUrl = podBundle.url(forResource: "SWEmailComposer", withExtension: "bundle") {
-            let bundle = Bundle(url: bundleUrl)
-            attachmentIcon.image = UIImage(named: "attachmentIcon", in: bundle , compatibleWith: nil)
-        }
+        attachmentIcon.image = UIImage(named: "attachmentIcon", in: Bundle.module, compatibleWith: nil)
         attachmentIcon.tintColor = UIColor.gray
         attachmentIcon.contentMode = .scaleAspectFit
         contentView.addSubview(attachmentIcon)
