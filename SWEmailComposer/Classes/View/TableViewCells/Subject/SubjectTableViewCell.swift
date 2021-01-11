@@ -13,14 +13,16 @@ import UIKit
 class SubjectTableViewCell: UITableViewCell {
 
     var subjectTextView: UITextView
-    fileprivate var subjectLabel: UILabel
+
     weak var emailSubjectTableViewCellDelegate: SubjectTableViewCellDelegate?
-    
+
+    private var subjectLabel: UILabel
+
     override init(style: CellStyle, reuseIdentifier: String?) {
-        self.subjectTextView = UITextView()
-        self.subjectLabel = UILabel()
+        subjectTextView = UITextView()
+        subjectLabel = UILabel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setup()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,59 +32,60 @@ class SubjectTableViewCell: UITableViewCell {
 
 extension SubjectTableViewCell {
     
-    fileprivate func setup() {
-        self.selectionStyle = .none
-        self.preservesSuperviewLayoutMargins = true
+    private func setup() {
+        selectionStyle = .none
+        preservesSuperviewLayoutMargins = true
+        contentView.autoresizingMask = [.flexibleHeight]
         
-        self.setupTextView()
-        self.setupLabel()
-        self.setupConstraints()
+        setupTextView()
+        setupLabel()
+        setupConstraints()
     }
     
-    fileprivate func setupTextView() {
-        self.subjectTextView.delegate = self
-        self.subjectTextView.translatesAutoresizingMaskIntoConstraints = false
-        self.subjectTextView.isScrollEnabled = false
-        self.subjectTextView.font = UIFont.systemFont(ofSize: 17)
-        self.addSubview(self.subjectTextView)
+    private func setupTextView() {
+        subjectTextView.delegate = self
+        subjectTextView.translatesAutoresizingMaskIntoConstraints = false
+        subjectTextView.isScrollEnabled = false
+        subjectTextView.font = UIFont.systemFont(ofSize: 17)
+        contentView.addSubview(subjectTextView)
     }
     
-    fileprivate func setupLabel() {
-        self.subjectLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.subjectLabel.textColor = UIColor.lightGray
-        self.subjectLabel.text = "Subject:"
-        self.addSubview(self.subjectLabel)
+    private func setupLabel() {
+        subjectLabel.translatesAutoresizingMaskIntoConstraints = false
+        subjectLabel.textColor = UIColor.lightGray
+        subjectLabel.text = "Subject:"
+        contentView.addSubview(subjectLabel)
     }
     
-    fileprivate func setupConstraints() {
+    private func setupConstraints() {
         let views = [
-            "label": self.subjectLabel,
-            "textView": self.subjectTextView
+            "label": subjectLabel,
+            "textView": subjectTextView
         ]
-        self.subjectLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        self.subjectLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        subjectLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        subjectLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         
-        self.subjectTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[label]-[textView]", options: [], metrics: nil, views: views))
+        subjectTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[label]-[textView]", options: [], metrics: nil, views: views))
         
-        self.addConstraint(NSLayoutConstraint(item: self.subjectLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: self.subjectTextView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: subjectLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: subjectTextView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: 0))
         
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]", options: [], metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(6)-[textView]-(6)-|", options: [], metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]", options: [], metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(6)-[textView]-(6)-|", options: [], metrics: nil, views: views))
     }
 }
 
 extension SubjectTableViewCell: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
-        let subject = self.subjectTextView.text ?? ""
-        self.emailSubjectTableViewCellDelegate?.didUpdateSubject(subjectTableViewCell: self, subject: subject)
+        let subject = subjectTextView.text ?? ""
+        emailSubjectTableViewCellDelegate?.didUpdateSubject(subjectTableViewCell: self, subject: subject)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
-            self.emailSubjectTableViewCellDelegate?.willReturn(subjectTableViewCell: self)
+            emailSubjectTableViewCellDelegate?.willReturn(subjectTableViewCell: self)
             return false
         }
         return true

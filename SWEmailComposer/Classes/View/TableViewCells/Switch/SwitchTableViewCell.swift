@@ -12,23 +12,22 @@ import UIKit
 
 class SwitchTableViewCell: UITableViewCell {
     
-    fileprivate let switchView: UISwitch
+    private let switchView = UISwitch()
     
     var switchState: Bool {
         get {
             return switchView.isOn
         }
         set(newSwitchState) {
-            self.switchView.isOn = newSwitchState
+            switchView.isOn = newSwitchState
         }
     }
     
     weak var switchTableViewCellDelegate: SwitchTableViewCellDelegate?
     
     override init(style: CellStyle, reuseIdentifier: String?) {
-        self.switchView = UISwitch()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setup()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,22 +35,22 @@ class SwitchTableViewCell: UITableViewCell {
     }
     
     @objc func switchChanged() {
-        self.switchTableViewCellDelegate?.didUpdateSwitchState(switchTableViewCell: self, state: self.switchView.isOn)
+        switchTableViewCellDelegate?.didUpdateSwitchState(switchTableViewCell: self, state: switchView.isOn)
     }
 }
 
 extension SwitchTableViewCell {
     
-    fileprivate func setup() {
-        self.selectionStyle = .none
-        self.textLabel?.textColor = UIColor.lightGray
+    private func setup() {
+        selectionStyle = .none
+        textLabel?.textColor = UIColor.lightGray
         
-        self.setupSwitch()
+        setupSwitch()
     }
     
-    fileprivate func setupSwitch() {
-        self.accessoryView = self.switchView
-        self.switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
+    private func setupSwitch() {
+        accessoryView = switchView
+        switchView.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
     }
 }
 

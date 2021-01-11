@@ -12,10 +12,8 @@ import UIKit
 
 class EmailAddressTableViewCell: UITableViewCell {
 
-    fileprivate var emailTextField: UITextField
-    fileprivate var emailLabel: UILabel
-    
     weak var emailAddressTableViewCellDelegate: EmailAddressTableViewCellDelegate?
+
     var emails: NSAttributedString? {
         get {
             return emailTextField.attributedText
@@ -37,17 +35,18 @@ class EmailAddressTableViewCell: UITableViewCell {
     var readonly: Bool = false {
         didSet {
             if readonly {
-                self.emailTextField.textColor = UIColor.lightGray
-                self.emailTextField.isUserInteractionEnabled = false
+                emailTextField.textColor = UIColor.lightGray
+                emailTextField.isUserInteractionEnabled = false
             }
         }
     }
+
+    private let emailTextField = UITextField()
+    private let emailLabel = UILabel()
     
     override init(style: CellStyle, reuseIdentifier: String?) {
-        self.emailTextField = UITextField()
-        self.emailLabel = UILabel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setup()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,62 +54,64 @@ class EmailAddressTableViewCell: UITableViewCell {
     }
     
     func makeEmailAddressFirstResponder() {
-        self.emailTextField.becomeFirstResponder()
+        emailTextField.becomeFirstResponder()
     }
     
     @objc func emailTextChanged(){
-        let emailAddresses = self.emailTextField.text ?? ""
-        self.emailAddressTableViewCellDelegate?.didUpdateEmailAddresses(emailAddressTableViewCell: self, emailAddresses: emailAddresses)
+        let emailAddresses = emailTextField.text ?? ""
+        emailAddressTableViewCellDelegate?.didUpdateEmailAddresses(emailAddressTableViewCell: self, emailAddresses: emailAddresses)
     }
     
 }
 
 extension EmailAddressTableViewCell {
     
-    fileprivate func setup() {
+    private func setup() {
         selectionStyle = .none
         preservesSuperviewLayoutMargins = true
+        contentView.autoresizingMask = [.flexibleHeight]
+
         setupTextView()
         setupLabel()
         setupConstraints()
     }
     
-    fileprivate func setupLabel() {
-        self.emailLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.emailLabel.textColor = UIColor.lightGray
-        self.addSubview(self.emailLabel)
+    private func setupLabel() {
+        emailLabel.translatesAutoresizingMaskIntoConstraints = false
+        emailLabel.textColor = UIColor.lightGray
+        contentView.addSubview(emailLabel)
     }
     
-    fileprivate func setupTextView() {
-        self.emailTextField.autocorrectionType = .no
-        self.emailTextField.autocapitalizationType = .none
-        self.emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        self.emailTextField.addTarget(self, action: #selector(emailTextChanged), for: .editingChanged)
-        self.emailTextField.delegate = self
-        self.emailTextField.keyboardType = .emailAddress
-        self.addSubview(self.emailTextField)
+    private func setupTextView() {
+        emailTextField.autocorrectionType = .no
+        emailTextField.autocapitalizationType = .none
+        emailTextField.translatesAutoresizingMaskIntoConstraints = false
+        emailTextField.addTarget(self, action: #selector(emailTextChanged), for: .editingChanged)
+        emailTextField.delegate = self
+        emailTextField.keyboardType = .emailAddress
+        contentView.addSubview(emailTextField)
     }
     
-    fileprivate func setupConstraints() {
+    private func setupConstraints() {
         let views = [
-            "label": self.emailLabel,
-            "textField": self.emailTextField
+            "label": emailLabel,
+            "textField": emailTextField
         ]
-        self.emailLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        self.emailLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        self.emailTextField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        self.addConstraint(NSLayoutConstraint(item: self.emailLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: self.emailTextField, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: 0))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[label]-[textField]", options: [], metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]|", options: [], metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textField(>=49)]|", options: [], metrics: nil, views: views))
+        emailLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        emailLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        emailTextField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        addConstraint(NSLayoutConstraint(item: emailLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: emailTextField, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: 0))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[label]-[textField]", options: [], metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]|", options: [], metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textField(>=49)]|", options: [], metrics: nil, views: views))
     }
 }
 
 extension EmailAddressTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.emailAddressTableViewCellDelegate?.willReturn(emailAddressTableViewCell: self)
+        emailAddressTableViewCellDelegate?.willReturn(emailAddressTableViewCell: self)
         return false
     }
     
