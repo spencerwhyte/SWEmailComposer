@@ -66,10 +66,11 @@ extension SubjectTableViewCell {
         subjectLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         
         subjectTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[label]-[textView]", options: [], metrics: nil, views: views))
         
-        addConstraint(NSLayoutConstraint(item: subjectLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: subjectTextView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: subjectLabel, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leadingMargin, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: subjectTextView, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailingMargin, multiplier: 1, constant: 0))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]", options: [], metrics: nil, views: views))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(6)-[textView]-(6)-|", options: [], metrics: nil, views: views))
