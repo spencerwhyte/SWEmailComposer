@@ -100,11 +100,11 @@ extension EmailAddressTableViewCell {
         emailLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         emailLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         emailTextField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        addConstraint(NSLayoutConstraint(item: emailLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: emailTextField, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: emailLabel, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leadingMargin, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: emailTextField, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailingMargin, multiplier: 1, constant: 0))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[label]-[textField]", options: [], metrics: nil, views: views))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]|", options: [], metrics: nil, views: views))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textField(>=49)]|", options: [], metrics: nil, views: views))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]|", options: [], metrics: nil, views: views))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textField(>=49)]|", options: [], metrics: nil, views: views))
     }
 }
 
