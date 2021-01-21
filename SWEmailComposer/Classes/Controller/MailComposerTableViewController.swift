@@ -41,6 +41,7 @@ public class MailComposerTableViewController: UITableViewController, UITextViewD
         if mailComposerModel.emailConfig.toEmail?.isEmpty != false {
             toEmailAddressTableViewCell()?.makeEmailAddressFirstResponder()
         }
+        updateCellSizes()
     }
     
     override public func viewDidLoad() {
@@ -153,7 +154,7 @@ extension MailComposerTableViewController {
         navigationItem.rightBarButtonItem?.isEnabled = isCompositionValid
     }
     
-    private func updateCellSize() {
+    private func updateCellSizes() {
         DispatchQueue.main.async { // HACK TO HANDLE AN IOS BUG: http://danspinosa.com/post/121100186427/apple-cmon-with-the-docs
             UIView.setAnimationsEnabled(false)
             self.tableView.beginUpdates()
@@ -178,7 +179,7 @@ extension MailComposerTableViewController {
 extension MailComposerTableViewController: BodyTableViewCellDelegate {
     
     func shouldUpdateCellSize(bodyTableViewCell: BodyTableViewCell) {
-        updateCellSize()
+        updateCellSizes()
     }
     
     func didUpdateBodyText(bodyTableViewCell: BodyTableViewCell, text: String) {
@@ -212,7 +213,7 @@ extension MailComposerTableViewController: SubjectTableViewCellDelegate {
         mailComposerModel.emailConfig.subject = subject
         updateNavigationTitle()
         didChangeModel()
-        updateCellSize()
+        updateCellSizes()
     }
     
     func willReturn(subjectTableViewCell: SubjectTableViewCell) {
