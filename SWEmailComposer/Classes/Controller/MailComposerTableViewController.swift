@@ -41,7 +41,6 @@ public class MailComposerTableViewController: UITableViewController, UITextViewD
         if mailComposerModel.emailConfig.toEmail?.isEmpty != false {
             toEmailAddressTableViewCell()?.makeEmailAddressFirstResponder()
         }
-        updateCellSizes()
     }
     
     override public func viewDidLoad() {

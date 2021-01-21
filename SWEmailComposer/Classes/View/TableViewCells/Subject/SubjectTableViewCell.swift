@@ -69,8 +69,8 @@ extension SubjectTableViewCell {
 
         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[label]-[textView]", options: [], metrics: nil, views: views))
         
-        addConstraint(NSLayoutConstraint(item: subjectLabel, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leadingMargin, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: subjectTextView, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailingMargin, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: subjectLabel, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leadingMargin, multiplier: 1, constant: 0))
+        contentView.addConstraint(NSLayoutConstraint(item: subjectTextView, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailingMargin, multiplier: 1, constant: 0))
         
         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label(>=49)]", options: [], metrics: nil, views: views))
         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-(6)-[textView]-(6)-|", options: [], metrics: nil, views: views))
