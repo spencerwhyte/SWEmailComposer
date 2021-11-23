@@ -61,7 +61,7 @@ extension AttachmentsTableViewCell {
     
     private func setupIcon() {
         attachmentIcon.translatesAutoresizingMaskIntoConstraints = false
-        //attachmentIcon.image = UIImage(named: "attachmentIcon", in: Bundle.module, compatibleWith: nil)
+        attachmentIcon.image = UIImage(named: "attachmentIcon", in: Bundle.module, compatibleWith: nil)
         attachmentIcon.tintColor = UIColor.gray
         attachmentIcon.contentMode = .scaleAspectFit
         contentView.addSubview(attachmentIcon)
