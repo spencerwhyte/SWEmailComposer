@@ -42,7 +42,7 @@ class MailComposerModel {
         if emailConfig.allowMultipleEmails == true {
             return ranges
         } else {
-            if  ranges.count == 1 && ranges.first?.length == email.count {
+            if ranges.count == 1 && ranges.first?.length == email.trimmingCharacters(in: .whitespacesAndNewlines).count {
                 return ranges
             } else {
                 return []
